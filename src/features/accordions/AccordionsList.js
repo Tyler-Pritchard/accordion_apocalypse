@@ -1,11 +1,12 @@
 import { Col, Row } from 'reactstrap';
-import {ACCORDIONS} from '../../app/shared/ACCORDIONS';
 import AccordionCard from './AccordionCard';
+import { selectAllAccordions } from './accordionsSlice';
 
 const AccordionsList = () => {
+    const accordions = selectAllAccordions();
     return (
         <Row className='ms-auto'>
-            {ACCORDIONS.map((accordion) => {
+            {accordions.map((accordion) => {
                 return (
                     <Col md='5' className='m-4' key={accordion.id}>
                         <AccordionCard accordion={accordion} />
