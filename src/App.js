@@ -1,14 +1,14 @@
 import React from 'react';
-import AccordionsList from './features/accordions/AccordionsList';
+import AccordionsDirectoryPage from './pages/AccordionsDirectoryPage';
 import Header from './components/Header';
-import './App.css';
 import Footer from './components/Footer';
+import './App.css';
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <AccordionsList />
+      <AccordionsDirectoryPage />
       <Footer />
     </div>
   );
