@@ -1,18 +1,18 @@
 import { useState } from 'react'
-import { Container, Row, Col, Button } from 'reactstrap';
+import { Container, Row, Col } from 'reactstrap';
 import AccordionsList from '../features/accordions/AccordionsList';
 import AccordionDetail from '../features/accordions/AccordionDetail';
-import { selectRandomAccordion } from '../features/accordions/accordionsSlice';
+import { selectAccordionById } from '../features/accordions/accordionsSlice';
 
 const AccordionsDirectoryPage = () => {
-    const [selectedAccordion, toggleAccordion] = useState(selectRandomAccordion());
+    const [accordionId, setAccordionId] = useState(0);
+    const selectedAccordion = selectAccordionById(accordionId);
 
     return (
         <Container>
-            <Button onClick={() => toggleAccordion(selectRandomAccordion())}>Select Random Accordion</Button>
             <Row>
                 <Col sm='5' md='7'>
-                    <AccordionsList />
+                    <AccordionsList setAccordionId={setAccordionId} />
                 </Col>
                 <Col sm='7' md='5'>
                     <AccordionDetail accordion={selectedAccordion} />

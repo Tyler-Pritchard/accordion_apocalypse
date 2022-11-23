@@ -4,6 +4,10 @@ export const selectAllAccordions = () => {
     return ACCORDIONS;
 }
 
-export const selectRandomAccordion = () => {
-    return ACCORDIONS[Math.floor(ACCORDIONS.length * Math.random())];
+export const selectAccordionById = (id) => {
+    return ACCORDIONS.find((accordion) => accordion.id === id);
 }
+
+// export const selectRandomAccordion = () => {
+//     return ACCORDIONS[Math.floor(ACCORDIONS.length * Math.random())];
+// }
