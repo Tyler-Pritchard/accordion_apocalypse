@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import ContactPage from './pages/ContactPage';
 import AccordionsDirectoryPage from './pages/AccordionsDirectoryPage';
+import AccordionDetailPage from './pages/AccordionDetailPage';
 import './App.css';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path='/' element={<HomePage />} />
         <Route path='contact' element={<ContactPage />} />
         <Route path='directory' element={<AccordionsDirectoryPage />} />
+        <Route path='directory/:accordionId' element={<AccordionDetailPage />} />
       </Routes>
       <Footer />
     </div>

@@ -5,7 +5,7 @@ export const selectAllAccordions = () => {
 }
 
 export const selectAccordionById = (id) => {
-    return ACCORDIONS.find((accordion) => accordion.id === id);
+    return ACCORDIONS.find((accordion) => accordion.id === parseInt(id));
 }
 
 export const selectFeaturedAccordion = () => {

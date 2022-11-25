@@ -2,7 +2,7 @@ import { Col, Row } from 'reactstrap';
 import AccordionCard from './AccordionCard';
 import { selectAllAccordions } from './accordionsSlice';
 
-const AccordionsList = ({ setAccordionId }) => {
+const AccordionsList = () => {
     const accordions = selectAllAccordions();
     return (
         <Row className='ms-auto'>
@@ -12,7 +12,6 @@ const AccordionsList = ({ setAccordionId }) => {
                         md='5' 
                         className='m-4' 
                         key={accordion.id}
-                        onClick={() => setAccordionId(accordion.id)}
                     >
                         <AccordionCard accordion={accordion} />
                     </Col>
