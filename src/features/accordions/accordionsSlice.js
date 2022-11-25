@@ -8,6 +8,10 @@ export const selectAccordionById = (id) => {
     return ACCORDIONS.find((accordion) => accordion.id === id);
 }
 
+export const selectFeaturedAccordion = () => {
+    return ACCORDIONS.find((accordion) => accordion.featured);
+}
+
 // export const selectRandomAccordion = () => {
 //     return ACCORDIONS[Math.floor(ACCORDIONS.length * Math.random())];
 // }
