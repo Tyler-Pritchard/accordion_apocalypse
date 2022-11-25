@@ -1,6 +1,6 @@
 import profile_icon from '../assets/img/profile_icon.png';
 
-export const PROMOTIONS = [
+export const INSTRUCTORS = [
     {
         id: 0,
         name: 'Big Lou the Accordion Princess',

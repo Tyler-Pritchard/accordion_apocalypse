@@ -22,7 +22,7 @@ export const ACCORDIONS = [
         name: 'Bellcordion 120 Bass',
         image: bellcordion,
         price: 1000.00,
-        featured: false,
+        featured: true,
         description:
             `This beautiful 1950's 120 bass Bellcordion has a 4/3 reed configuration and comes with a dry Italian tuning with just a hint of a tremolo. There are 10 treble register variations with a palm master switch. The bass side has 4 register settings.
 

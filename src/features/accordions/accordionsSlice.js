@@ -10,7 +10,7 @@ export const selectAccordionById = (id) => {
 
 export const selectFeaturedAccordion = () => {
     return ACCORDIONS.find((accordion) => accordion.featured);
-}
+};
 
 // export const selectRandomAccordion = () => {
 //     return ACCORDIONS[Math.floor(ACCORDIONS.length * Math.random())];
