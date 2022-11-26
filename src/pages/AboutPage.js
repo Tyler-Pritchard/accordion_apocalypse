@@ -1,6 +1,7 @@
 import { Col, Row, Container, Card, CardBody, CardHeader} from 'reactstrap';
 import about_us from '../app/assets/img/about_us.webp';
 import SubHeader from '../components/SubHeader';
+import EventsList from '../features/events/EventsList';
 
 const AboutPage = () => {
     return (
@@ -70,7 +71,8 @@ const AboutPage = () => {
             </Row>
             <Row className='row-content'>
                 <Col xs='12'>
-                    <h3>Instructors</h3>
+                    <h3>Events</h3>
+                    <EventsList />
                 </Col>
             </Row>
         </Container>
