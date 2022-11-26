@@ -1,7 +1,6 @@
 import { Col, Row, Container, Card, CardBody, CardHeader} from 'reactstrap';
 import about_us from '../app/assets/img/about_us.webp';
 import SubHeader from '../components/SubHeader';
-import { Link } from 'react-router-dom';
 
 const AboutPage = () => {
     return (
@@ -61,7 +60,7 @@ const AboutPage = () => {
                                 </p>
                                 <footer className='blockquote-footer'>
                                     <cite title='Source Title'>
-                                        <a href="https://web.archive.org/web/20180521141351/http://squeezeboxstories.com/stories/story-one-master-craftsman-and-young-apprentice/" target="_blank">squeezeboxstories.com</a>
+                                        <a href="https://web.archive.org/web/20180521141351/http://squeezeboxstories.com/stories/story-one-master-craftsman-and-young-apprentice/" target="_blank" rel='noreferrer'>squeezeboxstories.com</a>
                                     </cite>
                                 </footer>
                             </blockquote>

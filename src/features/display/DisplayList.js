@@ -2,10 +2,11 @@ import { Col, Row } from 'reactstrap';
 import DisplayCard from './DisplayCard';
 import {selectFeaturedInstructor} from '../instructors/instructorsSlice';
 import {selectFeaturedAccordion} from '../accordions/accordionsSlice';
+import { selectFeaturedEvent } from '../events/eventsSlice';
 
 const DisplayList = () => {
 
-    const items = [selectFeaturedAccordion(), selectFeaturedInstructor()];
+    const items = [selectFeaturedAccordion(), selectFeaturedInstructor(), selectFeaturedEvent()];
 
 
     return (
