@@ -1,6 +1,7 @@
 import { Col } from 'reactstrap';
 import Comment from './Comment';
 import { selectCommentsByAccordionId } from './commentsSlice';
+import CommentForm from './CommentForm';
 
 const CommentsList = ({accordionId}) => {
     const comments = selectCommentsByAccordionId(accordionId);
@@ -11,6 +12,7 @@ const CommentsList = ({accordionId}) => {
                 {comments.map((comment) => {
                     return <Comment key={comment.id} comment={comment} />
                 })}
+            <CommentForm accordionId={accordionId} />
             </Col>
         );
     };
