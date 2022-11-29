@@ -1,4 +1,16 @@
 import { ACCORDIONS } from "../../app/shared/ACCORDIONS";
+import { createSlice } from "@reduxjs/toolkit";
+
+const initialState = {
+    accordionsArray: ACCORDIONS
+};
+
+const accordionsSlice = createSlice({
+    name: 'accordions',
+    initialState
+});
+
+export const accordionsReducer = accordionsSlice.reducer;
 
 export const selectAllAccordions = () => {
     return ACCORDIONS;
