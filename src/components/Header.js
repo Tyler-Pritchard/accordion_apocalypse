@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Navbar, NavbarBrand, Collapse, NavbarToggler, Nav, NavItem } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 import AALogo from '../app/assets/img/aa_small.jpg';
+import UserLoginForm from '../features/user/UserLoginForm';
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -36,6 +37,7 @@ const Header = () => {
                         </NavLink>
                     </NavItem>
                 </Nav>
+                <UserLoginForm />
             </Collapse>
         </Navbar>
     )
