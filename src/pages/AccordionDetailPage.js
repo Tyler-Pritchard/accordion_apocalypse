@@ -1,3 +1,4 @@
+import { useSelector } from 'react-redux';
 import { Row, Container } from 'reactstrap';
 import { useParams } from 'react-router-dom';
 import { selectAccordionById } from '../features/accordions/accordionsSlice';
@@ -7,7 +8,7 @@ import SubHeader from '../components/SubHeader';
 
 const AccordionDetailPage = () => {
     const { accordionId } = useParams();
-    const accordion = selectAccordionById(accordionId);
+    const accordion = useSelector(selectAccordionById(accordionId));
 
     return (
         <Container>

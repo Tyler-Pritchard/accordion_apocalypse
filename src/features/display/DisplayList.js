@@ -1,3 +1,4 @@
+import { useSelector } from 'react-redux';
 import { Col, Row } from 'reactstrap';
 import AnimatedDisplayCard from './AnimatedDisplayCard';
 import {selectFeaturedInstructor} from '../instructors/instructorsSlice';
@@ -6,8 +7,7 @@ import { selectFeaturedEvent } from '../events/eventsSlice';
 
 const DisplayList = () => {
 
-    const items = [selectFeaturedAccordion(), selectFeaturedInstructor(), selectFeaturedEvent()];
-
+    const items = useSelector((state) => [selectFeaturedAccordion(state), selectFeaturedInstructor(state), selectFeaturedEvent(state)]);
 
     return (
         <Row>

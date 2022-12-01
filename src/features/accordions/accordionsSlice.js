@@ -12,16 +12,16 @@ const accordionsSlice = createSlice({
 
 export const accordionsReducer = accordionsSlice.reducer;
 
-export const selectAllAccordions = () => {
-    return ACCORDIONS;
+export const selectAllAccordions = (state) => {
+    return state.accordions.accordionsArray;
 }
 
-export const selectAccordionById = (id) => {
-    return ACCORDIONS.find((accordion) => accordion.id === parseInt(id));
+export const selectAccordionById = (id) => (state) => {
+    return state.accordions.accordionsArray.find((accordion) => accordion.id === parseInt(id));
 }
 
-export const selectFeaturedAccordion = () => {
-    return ACCORDIONS.find((accordion) => accordion.featured);
+export const selectFeaturedAccordion = (state) => {
+    return state.accordions.accordionsArray.find((accordion) => accordion.featured);
 };
 
 // export const selectRandomAccordion = () => {

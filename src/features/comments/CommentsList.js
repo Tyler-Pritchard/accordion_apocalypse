@@ -1,10 +1,13 @@
+import { useSelector } from 'react-redux';
 import { Col } from 'reactstrap';
 import Comment from './Comment';
 import { selectCommentsByAccordionId } from './commentsSlice';
 import CommentForm from './CommentForm';
 
 const CommentsList = ({accordionId}) => {
-    const comments = selectCommentsByAccordionId(accordionId);
+    
+    const comments = useSelector(selectCommentsByAccordionId(accordionId));
+
     if (comments && comments.length > 0) {
         return (
             <Col md='5' className='m-1'>

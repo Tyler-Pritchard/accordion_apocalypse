@@ -1,9 +1,12 @@
+import { useSelector } from 'react-redux';
 import { Col, Row } from 'reactstrap';
 import AccordionCard from './AccordionCard';
 import { selectAllAccordions } from './accordionsSlice';
 
 const AccordionsList = () => {
-    const accordions = selectAllAccordions();
+    const accordions = useSelector(selectAllAccordions);
+    console.log('accordions:', accordions);
+
     return (
         <Row className='ms-auto'>
             {accordions.map((accordion) => {

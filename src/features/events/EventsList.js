@@ -1,9 +1,10 @@
+import { useSelector } from 'react-redux';
 import { Col } from 'reactstrap';
 import Event from './Event';
 import { selectAllEvents } from './eventsSlice';
 
-const PartnersList = () => {
-    const events = selectAllEvents();
+const EventsList = () => {
+    const events = useSelector(selectAllEvents);
 
     return (
         <Col className='mt-4'>
@@ -18,4 +19,4 @@ const PartnersList = () => {
     );
 }
 
-export default PartnersList;
+export default EventsList;
