@@ -11,6 +11,7 @@ import {
 } from 'reactstrap';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import defaultAvatar from '../../app/assets/img/aa_small.jpg';
+import { validateUserLoginForm } from '../../utils/validateUserLoginForm';
 
 const UserLoginForm = () => {
     const [loginModalOpen, setLoginModalOpen] = useState(false);
@@ -60,6 +61,7 @@ const UserLoginForm = () => {
                             password: ''
                         }}
                         onSubmit={handleLogin}
+                        validate={validateUserLoginForm}
                     >
                         <Form>
                             <FormGroup>
