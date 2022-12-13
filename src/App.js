@@ -4,8 +4,8 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import ContactPage from './pages/ContactPage';
-import AccordionsDirectoryPage from './pages/AccordionsDirectoryPage';
-import AccordionDetailPage from './pages/AccordionDetailPage';
+import ProductsDirectoryPage from './pages/ProductsDirectoryPage';
+import ProductDetailPage from './pages/ProductDetailPage';
 import AboutPage from './pages/AboutPage';
 import './App.css';
 
@@ -16,8 +16,8 @@ function App() {
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='contact' element={<ContactPage />} />
-        <Route path='directory' element={<AccordionsDirectoryPage />} />
-        <Route path='directory/:accordionId' element={<AccordionDetailPage />} />
+        <Route path='directory' element={<ProductsDirectoryPage />} />
+        <Route path='directory/:productId' element={<ProductDetailPage />} />
         <Route path='about' element={<AboutPage />} />
       </Routes>
       <Footer />

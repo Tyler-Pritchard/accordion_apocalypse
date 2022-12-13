@@ -1,17 +1,17 @@
 import { Container, Row } from 'reactstrap';
-import AccordionsList from '../features/accordions/AccordionsList';
+import ProductsList from '../features/products/ProductsList';
 import SubHeader from '../components/SubHeader';
 
-const AccordionsDirectoryPage = () => {
+const ProductsDirectoryPage = () => {
 
     return (
         <Container>
             <SubHeader current='Direcotry' />
             <Row>
-                <AccordionsList />
+                <ProductsList />
             </Row>
         </Container>
     )
 }
 
-export default AccordionsDirectoryPage;
+export default ProductsDirectoryPage;

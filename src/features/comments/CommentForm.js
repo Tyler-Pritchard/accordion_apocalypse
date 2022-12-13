@@ -12,14 +12,14 @@ import {
 import { validateCommentForm } from '../../utils/validateCommentForm';
 import { addComment } from './commentsSlice';
 
-const CommentForm = ({ accordionId }) => {
+const CommentForm = ({ productId }) => {
     const [modalOpen, setModalOpen] = useState(false);
 
     const dispatch = useDispatch();
 
     const handleSubmit = (values) => {
         const comment = {
-            accordionId: parseInt(accordionId),
+            productId: parseInt(productId),
             rating: values.rating,
             author: values.author,
             text: values.commentText,

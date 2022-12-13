@@ -6,7 +6,7 @@ import lombardi from '../assets/img/Lombardi_12_bass.webp';
 import paoloSoprani from '../assets/img/Paolo_Soprani.webp';
 import russiaButton from '../assets/img/Russia_Button.webp';
 
-export const ACCORDIONS = [
+export const PRODUCTS = [
     {
         id: 0,
         name: 'Accordion Waist Strap',

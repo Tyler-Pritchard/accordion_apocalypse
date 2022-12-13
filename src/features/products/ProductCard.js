@@ -1,8 +1,8 @@
 import { Card, CardImg, CardImgOverlay, CardTitle} from 'reactstrap';
 import { Link } from 'react-router-dom';
 
-const AccordionCard = ({accordion}) => {
-    const { id, image, name } = accordion;
+const ProductCard = ({product}) => {
+    const { id, image, name } = product;
     return(
         <Link to={`${id}`}>
             <Card>
@@ -19,4 +19,4 @@ const AccordionCard = ({accordion}) => {
     )
 }
 
-export default AccordionCard;
+export default ProductCard;

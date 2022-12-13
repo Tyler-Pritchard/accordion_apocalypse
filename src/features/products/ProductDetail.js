@@ -1,7 +1,7 @@
 import { Card, CardImg, CardText, CardBody, Col } from 'reactstrap';
 
-const AccordionDetail = ({accordion}) => {
-    const { image, name, description } = accordion;
+const ProductDetail = ({product}) => {
+    const { image, name, description } = product;
 
     return (
         <Col md='5' className='m-1'>
@@ -15,4 +15,4 @@ const AccordionDetail = ({accordion}) => {
     )
 }
 
-export default AccordionDetail;
+export default ProductDetail;

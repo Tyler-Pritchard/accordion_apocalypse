@@ -24,8 +24,8 @@ export const commentsReducer = commentsSlice.reducer;
 
 export const { addComment } = commentsSlice.actions;
 
-export const selectCommentsByAccordionId = (accordionId) => (state) => {
+export const selectCommentsByProductId = (productId) => (state) => {
     return state.comments.commentsArray.filter(
-        (comment) => comment.accordionId === parseInt(accordionId)
+        (comment) => comment.productId === parseInt(productId)
     );
 };

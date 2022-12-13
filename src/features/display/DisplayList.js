@@ -2,12 +2,12 @@ import { useSelector } from 'react-redux';
 import { Col, Row } from 'reactstrap';
 import AnimatedDisplayCard from './AnimatedDisplayCard';
 import {selectFeaturedInstructor} from '../instructors/instructorsSlice';
-import {selectFeaturedAccordion} from '../accordions/accordionsSlice';
+import {selectFeaturedProduct} from '../products/productsSlice';
 import { selectFeaturedEvent } from '../events/eventsSlice';
 
 const DisplayList = () => {
 
-    const items = useSelector((state) => [selectFeaturedAccordion(state), selectFeaturedInstructor(state), selectFeaturedEvent(state)]);
+    const items = useSelector((state) => [selectFeaturedProduct(state), selectFeaturedInstructor(state), selectFeaturedEvent(state)]);
 
     return (
         <Row>
