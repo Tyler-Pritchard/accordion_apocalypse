@@ -1,4 +1,4 @@
-import profile_icon from '../assets/img/profile_icon.png';
+import profile_icon from '../../assets/img/profile_icon.png';
 
 export const INSTRUCTORS = [
     {

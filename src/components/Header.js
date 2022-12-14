@@ -23,7 +23,7 @@ const Header = () => {
                     </NavItem>
                     <NavItem>
                         <NavLink className='nav-link' to='/directory'>
-                            <i className='fa fa-list fa-lg' /> Accordions
+                            <i className='fa fa-list fa-lg' /> Products
                         </NavLink>
                     </NavItem>
                     <NavItem>

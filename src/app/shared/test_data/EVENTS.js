@@ -1,4 +1,4 @@
-import event_icon from '../assets/img/event_icon.png'
+import event_icon from '../../assets/img/event_icon.png'
 
 export const EVENTS = [
     {

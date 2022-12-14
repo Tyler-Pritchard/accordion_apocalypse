@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { EVENTS } from '../../app/shared/EVENTS';
+import { EVENTS } from '../../app/shared/test_data/EVENTS';
 
 const initialState = {
     eventsArray: EVENTS

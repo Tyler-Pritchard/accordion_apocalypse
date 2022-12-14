@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { INSTRUCTORS } from '../../app/shared/INSTRUCTORS';
+import { INSTRUCTORS } from '../../app/shared/test_data/INSTRUCTORS';
 
 const initialState = {
     instructorsArray: INSTRUCTORS
