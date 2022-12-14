@@ -12,7 +12,7 @@ const ProductDetailPage = () => {
 
     return (
         <Container>
-            <SubHeader current={product.name} detail={true} />
+            <SubHeader current={product.title} detail={true} />
             <Row>
                 <ProductDetail product={product} />
                 <CommentsList productId={productId} />

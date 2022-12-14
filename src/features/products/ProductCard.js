@@ -2,17 +2,17 @@ import { Card, CardImg, CardImgOverlay, CardTitle} from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 const ProductCard = ({product}) => {
-    const { id, image, name } = product;
+    const { _id, image, title } = product;
     return(
-        <Link to={`${id}`}>
+        <Link to={`${_id}`}>
             <Card>
                 <CardImg
                     width='100%'
                     src={image}
-                    alt={name}
+                    alt={title}
                 />
                 <CardImgOverlay>
-                    <CardTitle>{name}</CardTitle>
+                    <CardTitle>{title}</CardTitle>
                 </CardImgOverlay>
             </Card>
         </Link>
