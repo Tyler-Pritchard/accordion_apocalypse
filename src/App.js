@@ -10,11 +10,15 @@ import ProductDetailPage from './pages/ProductDetailPage';
 import AboutPage from './pages/AboutPage';
 import { fetchProducts } from './features/products/productsSlice';
 import './App.css';
+import { fetchEvents } from './features/events/eventsSlice';
+import { fetchInstructors } from './features/instructors/instructorsSlice';
 
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchProducts());
+    dispatch(fetchEvents());
+    dispatch(fetchInstructors());
   }, [dispatch]);
   return (
     <div className="App">
