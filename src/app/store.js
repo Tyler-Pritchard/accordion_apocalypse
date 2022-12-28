@@ -1,4 +1,4 @@
-import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
+import { configureStore } from '@reduxjs/toolkit';
 import logger from 'redux-logger';
 import { productsReducer } from '../features/products/productsSlice';
 import { eventsReducer } from '../features/events/eventsSlice';
