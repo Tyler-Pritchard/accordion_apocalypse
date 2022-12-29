@@ -52,7 +52,13 @@ export const selectProductById = (_id) => (state) => {
 }
 
 export const selectFeaturedProduct = (state) => {
-    return state.products.productsArray.find((product) => product.featured);
+    return { 
+        featuredProduct: state.products.productsArray.find(
+            (product) => product.featured
+        ),
+        isLoading: state.products.isLoading,
+        errMsg: state.products.errMsg
+    }
 };
 
 // export const selectRandomProduct = () => {
