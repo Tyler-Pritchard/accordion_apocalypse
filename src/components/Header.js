@@ -3,6 +3,16 @@ import { Navbar, NavbarBrand, Collapse, NavbarToggler, Nav, NavItem } from 'reac
 import { NavLink } from 'react-router-dom';
 import AALogo from '../app/assets/img/aa_small.jpg';
 import UserLoginForm from '../features/user/UserLoginForm';
+import { Search } from '@material-ui/icons';
+import styled from "styled-components";
+
+const SearchContainer = styled.span`
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-left: 1.5rem;
+`;
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -15,7 +25,16 @@ const Header = () => {
             </NavbarBrand>
             <NavbarToggler onClick={() => setMenuOpen(!menuOpen)} />
             <Collapse isOpen={menuOpen} navbar>
+                <SearchContainer>
+                    <Search />
+                    input
+                </SearchContainer>
                 <Nav className='ms-auto' navbar>
+                    <div className='navLink-container'>
+                        <div className='login-controls'>
+                            <UserLoginForm />
+                        </div>
+                        <div className='site-links'>
                     <NavItem>
                         <NavLink className='nav-link' to='/'>
                             <i className='fa fa-home fa-lg' /> Home
@@ -24,6 +43,16 @@ const Header = () => {
                     <NavItem>
                         <NavLink className='nav-link' to='/directory'>
                             <i className='fa fa-list fa-lg' /> Products
+                        </NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink className='nav-link' to='/repairs'>
+                            <i className='fa fa-wrench fa-lg' /> Repairs
+                        </NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink className='nav-link' to='/instructors'>
+                            <i className='fa fa-mortar-board fa-lg' /> Instructors
                         </NavLink>
                     </NavItem>
                     <NavItem>
@@ -36,8 +65,9 @@ const Header = () => {
                             <i className='fa fa-address-card fa-lg' /> Contact
                         </NavLink>
                     </NavItem>
+                        </div>
+                    </div>
                 </Nav>
-                <UserLoginForm />
             </Collapse>
         </Navbar>
     )

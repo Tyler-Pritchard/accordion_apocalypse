@@ -73,3 +73,21 @@ h2 {
   opacity: 0;
   transition: 300ms ease-in;
 }
+
+.navLink-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.site-links {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  justify-content: space-between;
+}
+
+.login-controls {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 1rem;
+}

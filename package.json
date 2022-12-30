@@ -3,6 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@material-ui/core": "^5.0.0-beta.5",
+    "@material-ui/icons": "^4.11.3",
+    "@mui/material": "^5.11.2",
     "@react-spring/web": "^9.5.5",
     "@reduxjs/toolkit": "^1.9.0",
     "@testing-library/jest-dom": "^5.16.5",
@@ -20,6 +25,7 @@
     "react-spring": "^9.5.4",
     "reactstrap": "^9.0.1",
     "redux-logger": "^3.0.6",
+    "styled-components": "^5.3.6",
     "typeface-lobster": "^1.1.13",
     "typeface-open-sans": "^1.1.13",
     "web-vitals": "^2.1.4"
