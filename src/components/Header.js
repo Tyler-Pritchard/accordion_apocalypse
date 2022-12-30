@@ -4,6 +4,8 @@ import { NavLink } from 'react-router-dom';
 import AALogo from '../app/assets/img/aa_small.jpg';
 import UserLoginForm from '../features/user/UserLoginForm';
 import { Search } from '@material-ui/icons';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import { Badge } from '@material-ui/core';
 import styled from "styled-components";
 
 const SearchContainer = styled.span`
@@ -12,7 +14,12 @@ const SearchContainer = styled.span`
     display: flex;
     align-items: center;
     margin-left: 1.5rem;
+    margin-top: 1.5rem;
 `;
+
+const Input = styled.input`
+    border: none;
+`
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -20,18 +27,22 @@ const Header = () => {
     return (
         <Navbar dark color='primary' sticky='top' expand='md'>
             <NavbarBrand className='ms-5' href='/'>
-                <img src={AALogo} alt='Accordion Apocalypse logo' />
-                <h1 className='mt-1'>Accordion Apocalypse</h1>
+                    <h1 className='mt-1'>Accordion Apocalypse</h1>
+                    <img src={AALogo} alt='Accordion Apocalypse logo' />
             </NavbarBrand>
             <NavbarToggler onClick={() => setMenuOpen(!menuOpen)} />
             <Collapse isOpen={menuOpen} navbar>
                 <SearchContainer>
                     <Search />
-                    input
+                    <Input />
                 </SearchContainer>
                 <Nav className='ms-auto' navbar>
                     <div className='navLink-container'>
                         <div className='login-controls'>
+                            <Badge badgeContent={2} color="primary">
+                                <ShoppingCartOutlinedIcon />
+                            </Badge>
+                            <UserLoginForm />
                             <UserLoginForm />
                         </div>
                         <div className='site-links'>
