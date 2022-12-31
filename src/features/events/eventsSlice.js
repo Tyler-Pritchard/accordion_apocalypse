@@ -3,14 +3,8 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { baseUrl } from '../../app/shared/baseUrl';
 import { mapImageURL } from '../../utils/mapImageURL';
 
-const initialState = {
-    eventsArray: [],
-    isLoading: true,
-    errMsg: ''
-};
-
 export const fetchEvents = createAsyncThunk(
-    'events',
+    'events/fetchEvents',
     async () => {
         const response = await fetch(baseUrl + 'events');
         if (!response.ok) {
@@ -20,6 +14,12 @@ export const fetchEvents = createAsyncThunk(
         return data;
     }
 );
+
+const initialState = {
+    eventsArray: [],
+    isLoading: true,
+    errMsg: ''
+};
 
 const eventsSlice = createSlice({
     name: 'events',
@@ -48,5 +48,11 @@ export const selectAllEvents = (state) => {
 };
 
 export const selectFeaturedEvent = (state) => {
-    return state.events.eventsArray.find((event) => event.featured)
+    return {
+        featuredItem: state.events.eventsArray.find(
+            (event) => event.featured
+        ),
+        isLoading: state.events.isLoading,
+        errMsg: state.events.errMsg
+    };
 };

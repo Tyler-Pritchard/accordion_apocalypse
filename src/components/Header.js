@@ -3,8 +3,8 @@ import { Navbar, NavbarBrand, Collapse, NavbarToggler, Nav, NavItem } from 'reac
 import { NavLink } from 'react-router-dom';
 import AALogo from '../app/assets/img/aa_small.jpg';
 import UserLoginForm from '../features/user/UserLoginForm';
-import { Search } from '@material-ui/icons';
-import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import UserSignUpForm from '../features/user/UserSignUpForm';
+import { Search, ShoppingCartOutlined } from '@material-ui/icons';
 import { Badge } from '@material-ui/core';
 import styled from "styled-components";
 
@@ -40,10 +40,10 @@ const Header = () => {
                     <div className='navLink-container'>
                         <div className='login-controls'>
                             <Badge badgeContent={2} color="primary">
-                                <ShoppingCartOutlinedIcon />
+                                <ShoppingCartOutlined />
                             </Badge>
                             <UserLoginForm />
-                            <UserLoginForm />
+                            <UserSignUpForm />
                         </div>
                         <div className='site-links'>
                     <NavItem>

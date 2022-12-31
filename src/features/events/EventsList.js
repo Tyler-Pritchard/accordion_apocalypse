@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { Col, Row } from 'reactstrap';
+import { Col } from 'reactstrap';
 import Event from './Event';
 import { selectAllEvents } from './eventsSlice';
 import Loading from '../../components/Loading';
@@ -16,7 +16,6 @@ const EventsList = () => {
         <Error errMsg={errMsg} />
     ) : (
         <Col className='mt-4'>
-            <Row>
             {events.map((event) => {
                 return (
                     <div className='d-flex mb-5' key={event.id}>
@@ -24,7 +23,6 @@ const EventsList = () => {
                     </div>
                 );
             })}
-            </Row>
         </Col>
     
     );
