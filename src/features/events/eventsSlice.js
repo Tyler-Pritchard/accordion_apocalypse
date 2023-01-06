@@ -48,11 +48,13 @@ export const selectAllEvents = (state) => {
 };
 
 export const selectFeaturedEvent = (state) => {
-    return {
-        featuredItem: state.events.eventsArray.find(
-            (event) => event.featured
-        ),
-        isLoading: state.events.isLoading,
-        errMsg: state.events.errMsg
-    };
+    //THIS CODE IS CAUSING FEATURED INSTRUCTOR NOT TO LOAD
+    // return {
+    //     featuredItem: state.events.eventsArray.find(
+    //         (event) => event.featured
+    //     ),
+    //     isLoading: state.events.isLoading,
+    //     errMsg: state.events.errMsg
+    // };
+    return state.events.eventsArray.find((event) => event.featured);
 };

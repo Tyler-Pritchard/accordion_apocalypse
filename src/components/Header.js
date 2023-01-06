@@ -39,7 +39,7 @@ const Header = () => {
                 <Nav className='ms-auto' navbar>
                     <div className='navLink-container'>
                         <div className='login-controls'>
-                            <Badge badgeContent={2} color="primary">
+                            <Badge badgeContent={2} color="primary" overlap="rectangular">
                                 <ShoppingCartOutlined />
                             </Badge>
                             <UserLoginForm />

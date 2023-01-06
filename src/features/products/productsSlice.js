@@ -3,6 +3,12 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { baseUrl } from '../../app/shared/baseUrl';
 import { mapImageURL } from "../../utils/mapImageURL";
 
+const initialState = {
+    productsArray: [],
+    isLoading: true,
+    errMsg: ''
+};
+
 export const fetchProducts = createAsyncThunk(
     'products/fetchProducts',
     async () => {
@@ -14,12 +20,6 @@ export const fetchProducts = createAsyncThunk(
         return data;
     }
 );
-
-const initialState = {
-    productsArray: [],
-    isLoading: true,
-    errMsg: ''
-};
 
 const productsSlice = createSlice({
     name: 'products',
@@ -43,6 +43,18 @@ const productsSlice = createSlice({
 
 export const productsReducer = productsSlice.reducer;
 
+export const selectFeaturedProduct = (state) => {
+    //THIS CODE IS CAUSING FEATURED PRODUCTS NOT TO LOAD
+    // return { 
+    //     featuredProduct: state.products.productsArray.find(
+    //         (product) => product.featured
+    //     ),
+    //     isLoading: state.products.isLoading,
+    //     errMsg: state.products.errMsg
+    // }
+    return state.products.productsArray.find((product) => product.featured);
+};
+
 export const selectAllProducts = (state) => {
     return state.products.productsArray;
 }
@@ -50,16 +62,6 @@ export const selectAllProducts = (state) => {
 export const selectProductById = (_id) => (state) => {
     return state.products.productsArray.find((product) => product.id === parseInt(_id));
 }
-
-export const selectFeaturedProduct = (state) => {
-    return { 
-        featuredProduct: state.products.productsArray.find(
-            (product) => product.featured
-        ),
-        isLoading: state.products.isLoading,
-        errMsg: state.products.errMsg
-    }
-};
 
 // export const selectRandomProduct = () => {
 //     return PRODUCTS[Math.floor(PRODUCTS.length * Math.random())];
