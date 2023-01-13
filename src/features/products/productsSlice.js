@@ -45,14 +45,14 @@ export const productsReducer = productsSlice.reducer;
 
 export const selectFeaturedProduct = (state) => {
     //THIS CODE IS CAUSING FEATURED PRODUCTS NOT TO LOAD
-    // return { 
-    //     featuredProduct: state.products.productsArray.find(
-    //         (product) => product.featured
-    //     ),
-    //     isLoading: state.products.isLoading,
-    //     errMsg: state.products.errMsg
-    // }
-    return state.products.productsArray.find((product) => product.featured);
+    return { 
+        featuredProduct: state.products.productsArray.find(
+            (product) => product.featured
+        ),
+        isLoading: state.products.isLoading,
+        errMsg: state.products.errMsg
+    }
+    // return state.products.productsArray.find((product) => product.featured);
 };
 
 export const selectAllProducts = (state) => {
