@@ -8,6 +8,8 @@ import ContactPage from './pages/ContactPage';
 import ProductsDirectoryPage from './pages/ProductsDirectoryPage';
 import ProductDetailPage from './pages/ProductDetailPage';
 import AboutPage from './pages/AboutPage';
+import Pay from './components/Pay';
+// import Success from './pages/Success';
 import { fetchProducts } from './features/products/productsSlice';
 import './App.css';
 import { fetchEvents } from './features/events/eventsSlice';
@@ -29,6 +31,10 @@ function App() {
         <Route path='directory' element={<ProductsDirectoryPage />} />
         <Route path='directory/:productId' element={<ProductDetailPage />} />
         <Route path='about' element={<AboutPage />} />
+        {/* CREATE ROUTES/COMPONENTS FOR PAY & SUCCESS
+        <Route path='/success' element={<Success />} /> */}
+        <Route path='/pay' element={<Pay />} />
+
       </Routes>
       <Footer />
     </div>
